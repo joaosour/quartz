@@ -1,5 +1,5 @@
 ---
-{"publish":true,"created":"2025-10-16T23:36:19.389-03:00","modified":"2025-10-17T13:28:25.000-03:00","cssclasses":""}
+{"publish":true,"created":"2025-10-16T23:36:19.389-03:00","modified":"2025-10-17T13:43:11.532-03:00","cssclasses":""}
 ---
 
 ✅ Download e Atualização de Rotinas
@@ -10,38 +10,30 @@
 
 ⚠️ IMPORTANTE
 
-1. Nenhum usuário logado
-    
-2. Fora do horário de expediente
-    
-3. Parar serviços da Máxima Tech e outros que dependem do winthor
-    
+1. Nenhum usuário logado;
+2. Fora do horário de expediente;
+3. Parar serviços da Máxima Tech e outros que dependem do winthor;
 
 ---
 
-- [ ] **CCW**
-	- [ ] Baixar rotinas
-	- [ ] Colar rotinas no P
-	- [ ] Pegar o arquivo da PCINF000.EXE (pasta MOD-000) e PCINFTAB.PC (MOD-005) e substituir na pasta geral do P:/ (lembrando de renomear os arquivos antigos para "nomeDoArquivo.NumeroDaVersaoAntiga.ExtensaoDoArquivo" para deixar salvo por segurança.
+### CCW
+- [ ] Baixar rotinas
+- [ ] Colar rotinas no P
+- [ ] Pegar o arquivo da PCINF000.EXE (pasta MOD-000) e PCINFTAB.PC (MOD-005) e substituir na pasta geral do P:/ (lembrando de renomear os arquivos antigos para "nomeDoArquivo.NumeroDaVersaoAntiga.ExtensaoDoArquivo" para deixar salvo por segurança.
 - [ ] Abrir o Winthor e verificar se aparece a versão nova, bem como para a 560 também. 
     
 
 - [ ] **Atualizar Tabelas, Dicionário de Dados, Procedures**
     
 
-- [ ] ### Atualizar tabelas na 560 nas seguintes guias, usando a opção "Selecionar todas" (cerca de 30min):
-    
-
+### Atualizar tabelas na 560 nas seguintes guias, usando a opção "Selecionar todas" (cerca de 30min):
 	- [ ] Criação/Alt de tabelas e campos.
-	    
 	- [ ] Criação/Alt de índices.
-	    
 	- [ ] Menu/Perm/Fórmulas.
-	    
 	- [ ] Controle de Atualizações > reprocessar.
     
 
-- [ ] ### Atualizar Dicionário de Dados:
+### Atualizar Dicionário de Dados:
     
 
 - [ ] Rotina 560
@@ -49,7 +41,7 @@
 - [ ] Dicionário de Dados > Criar Novo.
     
 
-- [ ] ### Atualizar Procedures 
+### Atualizar Procedures 
     
 
 - [ ] 500
