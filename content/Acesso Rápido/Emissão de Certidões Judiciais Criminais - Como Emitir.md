@@ -1,5 +1,5 @@
 ---
-{"publish":true,"permalink":"/emissao_certidao_criminal","created":"2025-10-17T16:23:18.482-03:00","modified":"2025-10-17T19:08:30.536-03:00","cssclasses":""}
+{"publish":true,"permalink":"/emissao_certidao_criminal","created":"2025-10-17T16:23:18.482-03:00","modified":"2025-10-17T19:13:42.148-03:00","cssclasses":""}
 ---
 
 #### CERTIDÃO DA POLÍCIA CIVIL
@@ -16,10 +16,10 @@
 
 #### CERTIDÃO DA JUSTIÇA FEDERAL
 [Clique aqui para acessar o site](https://sistemas.trf1.jus.br/certidao/#/solicitacao)
-	a. Preencha o Tipo de Certidão com “Criminal”
-	b. Preencha o Órgão(s) com “SEÇÃO JUDICIÁRIA DO ESTADO DO PARÁ”
-    c. Preencha o o seu CPF
-    d. Clique em “Emitir Certidão” 
+a. Preencha o Tipo de Certidão com “Criminal”
+b. Preencha o Órgão(s) com “SEÇÃO JUDICIÁRIA DO ESTADO DO PARÁ”
+c. Preencha o o seu CPF
+d. Clique em “Emitir Certidão” 
     
 ![[Arquivos/Pasted image 20251017162554.png]]
 
