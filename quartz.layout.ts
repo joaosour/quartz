@@ -1,7 +1,7 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
-// Components shared across all pages
+// components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
@@ -14,21 +14,7 @@ export const sharedPageComponents: SharedLayout = {
   }),
 }
 
-// Layout específico para a página inicial (index)
-export const homePageLayout: PageLayout = {
-  beforeBody: [
-    Component.PageTitle(),
-    Component.Explorer(),  // Explorer dentro do corpo da página inicial
-  ],
-  left: [],  // Remove explorer da barra lateral na home
-  right: [
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
-    // Grafo oculto na home (não incluído aqui)
-  ],
-}
-
-// Layout padrão para páginas que exibem uma única página (notas)
+// components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
@@ -52,22 +38,20 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.ConditionalRender({
-      component: Component.Explorer(),
-      condition: (page) => page.fileData.slug !== "index", // Explorer não aparece na lateral da home
-    }),
+    Component.Explorer(),  // Mantém o explorer visível na esquerda
   ],
   right: [
     Component.ConditionalRender({
       component: Component.Graph(),
-      condition: (page) => page.fileData.slug !== "index",  // Grafo não aparece na home
+      condition: (page) => page.fileData.slug !== "index",  // Esconde na home
     }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
 }
 
-// Layout para páginas de listagem (tags, pastas)
+
+// components for pages that display lists of pages  (e.g. tags or folders)
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
@@ -86,13 +70,3 @@ export const defaultListPageLayout: PageLayout = {
   ],
   right: [],
 }
-
-// Exporta páginas para associar layouts
-export const pages = [
-  {
-    path: "index",
-    layout: homePageLayout,
-  },
-  // Use layout padrão para outras páginas
-];
-
