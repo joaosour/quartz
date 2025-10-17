@@ -1,5 +1,5 @@
 ---
-{"publish":true,"created":"2025-10-16T23:36:30.605-03:00","modified":"2025-10-17T13:43:11.000-03:00","cssclasses":""}
+{"publish":true,"created":"2025-10-17T16:19:03.717-03:00","modified":"2025-10-17T13:43:11.000-03:00","cssclasses":""}
 ---
 
 ✅ Download e Atualização de Rotinas
