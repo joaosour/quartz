@@ -1,5 +1,5 @@
 ---
-{"publish":true,"created":"2025-10-16T23:36:30.605-03:00","modified":"2025-10-17T18:51:32.929-03:00","cssclasses":""}
+{"publish":true,"created":"2025-10-16T23:36:30.605-03:00","modified":"2025-10-17T21:14:58.726-03:00","cssclasses":""}
 ---
 
 ✅ Download e Atualização de Rotinas
@@ -22,11 +22,11 @@
 - [ ] Criação/Alt de índices.
 - [ ] Menu/Perm/Fórmulas.
 - [ ] Controle de Atualizações > reprocessar.
-### Atualizar Dicionário de Dados:
+### Atualizar Dicionário de Dados: (não é necessário fazer mais nada na 560, só seguir para as demais - 300, 2500 etc)
 - [ ] Rotina 560
 - [ ] Dicionário de Dados > Criar Novo.
 ### Atualizar Procedures 
-- [ ] **500**
+- [x] **500**
 	- [ ] Essenciais
 	- [ ] Functions
 	- [ ] Acessórios
@@ -34,26 +34,27 @@
 	- [ ] Triggers
 	- [ ] Views
 
-- [ ] **300**
+- [x] **300**
 	- [ ] Todas as abas
 	- [ ] Recompilar
 
-- [ ] **2500**
+- [x] **2500**
 	- [ ] Todas as abas
 
-- [ ] **1700**
+- [x] **1700**
 	- [ ] Todas as abas (t)
 
-- [ ] **1100**
+- [x] **1100**
 	- [ ] Todas as abas
 
-- [ ] **1400**
+- [x] **1400**
 	- [ ] Todas as abas (marcar Dropar objetivos)
+	- [ ] Obs: pode dar erro na PCFISCAL e FWPCFISCAL (ou algo assim).Ambas devem estar na mesma versão para funcionar. Primeiro atualiza fiscal, depois FWPC, qualquer coisa atualizar a PARAMFILIAL (ou algo assim) antes dessas duas. No passado deu erro ao atualizar a FWPC porque faltavam atualizar a PCPARAMFILIAL.
 
-- [ ] **1460** (descontinuada, migrada para o WTA, 814)
+- [x] **1460** (descontinuada, migrada para o WTA, 814)
 	- [ ] Todas as abas
 
-- [ ] [Acessar WTA (clique aqui)](http://192.168.1.202:8080/portal/#/rotina)
+- [x] [Acessar WTA (clique aqui)](http://192.168.1.202:8080/portal/#/rotina)
 	- [ ] Pesquisar 814 e atualizar tudo (em caso de falhas, conferir se a maioria atualizou apenas, é o que importa)
 	- [ ] Pesquisar 801 e atualizar serviços WEB.
 	- [ ] Verificar se aparece a loja WINT no logon do portal
@@ -68,7 +69,7 @@
 - [ ] **IMPORTANTE:** Após atualizar, consultar se há atualizações do WTA na 801 (como núcleo do WTA por exemplo). Após atualizar tudo, consultar atualizações de estoque e financeiro principalmente na 814:
 	- [ ] PKG_ANALISAR_ESTOQUE
 	- [ ] PKG_LOG_ESTOQUE
-	- [ ] ATUALIZACAO_DIARIA
+	- [x] ATUALIZACAO_DIARIA
 
 - [ ] **BÁSICO, MAS IMPORTANTE:** Confirmar se a data e hora do WTA estão corretas, do contrário impacta diretamente o sucesso da consolidação automática da 820.
 - [ ] Reativar o parâmetro de **Enviar e-mail automático** dentro de "Configurações da rotina" **em todo usuário do faturamento**, pois a atualização sempre desmarca fazendo com que o XML não vá automaticamente para o cliente.
