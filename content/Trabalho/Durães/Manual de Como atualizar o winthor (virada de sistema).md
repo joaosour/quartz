@@ -1,5 +1,5 @@
 ---
-{"publish":true,"title":"Manual de como atualizar o winthor","created":"2025-10-16T23:36:30.605-03:00","modified":"2025-10-18T11:46:28.930-03:00","cssclasses":""}
+{"publish":true,"title":"Manual de como atualizar o winthor","created":"2025-10-18T14:32:48.847-03:00","modified":"2025-10-18T11:46:28.000-03:00","cssclasses":""}
 ---
 
 ✅ Download e Atualização de Rotinas
