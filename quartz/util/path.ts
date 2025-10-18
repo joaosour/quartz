@@ -1,10 +1,6 @@
 import { slug as slugAnchor } from "github-slugger"
 import type { Element as HastElement } from "hast"
 import { clone } from "./clone"
-// original acima
-import removeAccents from "remove-accents"
-import { stripSlashes, getFileExtension, endsWith, sluggify } from "./pathHelpers"
-import type { FilePath, FullSlug } from "./types"
 
 // this file must be isomorphic so it can't use node libs (e.g. path)
 
@@ -72,8 +68,8 @@ function sluggify(s: string): string {
     .join("/") // always use / as sep
     .replace(/\/$/, "")
 }
-//original abaixo - incio
-/*export function slugifyFilePath(fp: FilePath, excludeExt?: boolean): FullSlug {
+
+export function slugifyFilePath(fp: FilePath, excludeExt?: boolean): FullSlug {
   fp = stripSlashes(fp) as FilePath
   let ext = getFileExtension(fp)
   const withoutFileExt = fp.replace(new RegExp(ext + "$"), "")
@@ -89,52 +85,7 @@ function sluggify(s: string): string {
   }
 
   return (slug + ext) as FullSlug
-}*/
-//original acima - fim
-
-// novo - inicio
-
-export function slugifyFilePath(
-  fp: FilePath,
-  excludeExt?: boolean,
-  frontmatter?: Record<string, any>
-): FullSlug {
-  // 1. Se o frontmatter tiver slug definido, use-o diretamente
-  if (frontmatter?.slug) {
-    let safeSlug = String(frontmatter.slug)
-      .trim()
-      .replace(/^\/+|\/+$/g, "") // remove barras extras
-      .toLowerCase()
-    return safeSlug as FullSlug
-  }
-
-  // 2. Caso contrário, use o nome do arquivo e sanitize
-  fp = stripSlashes(fp) as FilePath
-  let ext = getFileExtension(fp)
-  const withoutFileExt = fp.replace(new RegExp(ext + "$"), "")
-
-  if (excludeExt || [".md", ".html", undefined].includes(ext)) {
-    ext = ""
-  }
-
-  // Extrai apenas o nome base do arquivo (sem caminho)
-  let slug = withoutFileExt.split("/").pop() ?? ""
-
-  // Sanitização personalizada
-  slug = removeAccents(slug) // remove acentos
-    .replace(/\s+/g, "_") // substitui espaços por _
-    .replace(/[()]/g, "_") // substitui parênteses
-    .replace(/[^a-zA-Z0-9_-]/g, "") // remove símbolos
-    .toLowerCase() // força lowercase
-
-  // Se o nome terminar com "_index", trata como index
-  if (endsWith(slug, "_index")) {
-    slug = slug.replace(/_index$/, "index")
-  }
-
-  return slug as FullSlug
 }
-// novo - fim
 
 export function simplifySlug(fp: FullSlug): SimpleSlug {
   const res = stripSlashes(trimSuffix(fp, "index"), true)
