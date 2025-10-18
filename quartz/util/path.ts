@@ -72,21 +72,25 @@ function sluggify(s: string): string {
     .replace(/\/$/, "")
 }
 
+import removeAccents from "remove-accents"
+import { getFileExtension, endsWith, stripSlashes } from "./pathHelpers"
+import type { FilePath, FullSlug } from "./types"
+
 export function slugifyFilePath(
   fp: FilePath,
   excludeExt?: boolean,
   frontmatter?: Record<string, any>
 ): FullSlug {
-  // 1. Se o frontmatter tiver slug definido, use-o diretamente
+  // Se frontmatter tiver slug, usar
   if (frontmatter?.slug) {
     let safeSlug = String(frontmatter.slug)
       .trim()
-      .replace(/^\/+|\/+$/g, "") // remove barras extras do início e fim
+      .replace(/^\/+|\/+$/g, "") // remove barras extras
       .toLowerCase()
     return safeSlug as FullSlug
   }
 
-  // 2. Caso contrário, use o nome do arquivo e sanitize
+  // Caso contrário, sanitizar o nome do arquivo
   fp = stripSlashes(fp) as FilePath
   let ext = getFileExtension(fp)
   const withoutFileExt = fp.replace(new RegExp(ext + "$"), "")
@@ -95,17 +99,14 @@ export function slugifyFilePath(
     ext = ""
   }
 
-  // Extrai apenas o nome base do arquivo (sem caminho)
   let slug = withoutFileExt.split("/").pop() ?? ""
 
-  // Sanitização personalizada
-  slug = removeAccents(slug)          // remove acentos
-    .replace(/\s+/g, "_")             // substitui espaços por underline
-    .replace(/[()]/g, "_")            // substitui parênteses por underline
-    .replace(/[^a-zA-Z0-9_-]/g, "")  // remove outros símbolos
-    .toLowerCase()                   // converte para minúsculas
+  // Sanitizar: remove acentos, troca espaços por _, remove caracteres não permitidos, tudo em minúsculo
+  slug = removeAccents(slug)
+    .replace(/\s+/g, "_")
+    .replace(/[^a-zA-Z0-9_-]/g, "")
+    .toLowerCase()
 
-  // Se o nome terminar com "_index", trata como index
   if (endsWith(slug, "_index")) {
     slug = slug.replace(/_index$/, "index")
   }
