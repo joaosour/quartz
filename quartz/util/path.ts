@@ -1,9 +1,6 @@
 import { slug as slugAnchor } from "github-slugger"
 import type { Element as HastElement } from "hast"
 import { clone } from "./clone"
-import removeAccents from "remove-accents"
-import { stripSlashes, getFileExtension, endsWith } from "./pathHelpers"
-import type { FilePath, FullSlug } from "./types"
 
 // this file must be isomorphic so it can't use node libs (e.g. path)
 
@@ -72,46 +69,22 @@ function sluggify(s: string): string {
     .replace(/\/$/, "")
 }
 
-import removeAccents from "remove-accents"
-import { getFileExtension, endsWith, stripSlashes } from "./pathHelpers"
-import type { FilePath, FullSlug } from "./types"
-
-export function slugifyFilePath(
-  fp: FilePath,
-  excludeExt?: boolean,
-  frontmatter?: Record<string, any>
-): FullSlug {
-  // Se frontmatter tiver slug, usar
-  if (frontmatter?.slug) {
-    let safeSlug = String(frontmatter.slug)
-      .trim()
-      .replace(/^\/+|\/+$/g, "") // remove barras extras
-      .toLowerCase()
-    return safeSlug as FullSlug
-  }
-
-  // Caso contrário, sanitizar o nome do arquivo
+export function slugifyFilePath(fp: FilePath, excludeExt?: boolean): FullSlug {
   fp = stripSlashes(fp) as FilePath
   let ext = getFileExtension(fp)
   const withoutFileExt = fp.replace(new RegExp(ext + "$"), "")
-
   if (excludeExt || [".md", ".html", undefined].includes(ext)) {
     ext = ""
   }
 
-  let slug = withoutFileExt.split("/").pop() ?? ""
+  let slug = sluggify(withoutFileExt)
 
-  // Sanitizar: remove acentos, troca espaços por _, remove caracteres não permitidos, tudo em minúsculo
-  slug = removeAccents(slug)
-    .replace(/\s+/g, "_")
-    .replace(/[^a-zA-Z0-9_-]/g, "")
-    .toLowerCase()
-
+  // treat _index as index
   if (endsWith(slug, "_index")) {
     slug = slug.replace(/_index$/, "index")
   }
 
-  return slug as FullSlug
+  return (slug + ext) as FullSlug
 }
 
 export function simplifySlug(fp: FullSlug): SimpleSlug {
