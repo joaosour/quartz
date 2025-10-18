@@ -1,6 +1,9 @@
 import { slug as slugAnchor } from "github-slugger"
 import type { Element as HastElement } from "hast"
 import { clone } from "./clone"
+import removeAccents from "remove-accents"
+import { stripSlashes, getFileExtension, endsWith } from "./pathHelpers"
+import type { FilePath, FullSlug } from "./types"
 
 // this file must be isomorphic so it can't use node libs (e.g. path)
 
@@ -69,22 +72,45 @@ function sluggify(s: string): string {
     .replace(/\/$/, "")
 }
 
-export function slugifyFilePath(fp: FilePath, excludeExt?: boolean): FullSlug {
+export function slugifyFilePath(
+  fp: FilePath,
+  excludeExt?: boolean,
+  frontmatter?: Record<string, any>
+): FullSlug {
+  // 1. Se o frontmatter tiver slug definido, use-o diretamente
+  if (frontmatter?.slug) {
+    let safeSlug = String(frontmatter.slug)
+      .trim()
+      .replace(/^\/+|\/+$/g, "") // remove barras extras do início e fim
+      .toLowerCase()
+    return safeSlug as FullSlug
+  }
+
+  // 2. Caso contrário, use o nome do arquivo e sanitize
   fp = stripSlashes(fp) as FilePath
   let ext = getFileExtension(fp)
   const withoutFileExt = fp.replace(new RegExp(ext + "$"), "")
+
   if (excludeExt || [".md", ".html", undefined].includes(ext)) {
     ext = ""
   }
 
-  let slug = sluggify(withoutFileExt)
+  // Extrai apenas o nome base do arquivo (sem caminho)
+  let slug = withoutFileExt.split("/").pop() ?? ""
 
-  // treat _index as index
+  // Sanitização personalizada
+  slug = removeAccents(slug)          // remove acentos
+    .replace(/\s+/g, "_")             // substitui espaços por underline
+    .replace(/[()]/g, "_")            // substitui parênteses por underline
+    .replace(/[^a-zA-Z0-9_-]/g, "")  // remove outros símbolos
+    .toLowerCase()                   // converte para minúsculas
+
+  // Se o nome terminar com "_index", trata como index
   if (endsWith(slug, "_index")) {
     slug = slug.replace(/_index$/, "index")
   }
 
-  return (slug + ext) as FullSlug
+  return slug as FullSlug
 }
 
 export function simplifySlug(fp: FullSlug): SimpleSlug {
