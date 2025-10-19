@@ -1,7 +1,7 @@
 // @ts-ignore
 import clipboardScript from "./scripts/clipboard.inline"
 // @ts-ignore
-import openLinksScript from "./scripts/openLinks.inline"
+import openLinksScript from "./scripts/openLinks.inline.js" // ← note o .js
 import clipboardStyle from "./styles/clipboard.scss"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
