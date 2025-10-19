@@ -1,3 +1,45 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+/* Garante quebra de linha normal em listas */
+ol, ul {
+  display: block !important;
+  list-style-position: outside !important;
+  margin: 1em 0 !important;
+  padding-left: 2em !important;
+}
+
+li {
+  display: list-item !important;
+  margin: 0.3em 0 !important;
+}
+
+
+/* Exibe o código inteiro sem rolagem */
+pre, code {
+  overflow: visible !important;
+  white-space: pre-wrap !important; /* permite quebra de linha */
+  word-wrap: break-word !important;
+  max-height: none !important;
+}
+
+/* Ajuste para listas apenas no conteúdo principal da página */
+main ol, main ul {
+  display: block !important;
+  list-style-position: outside !important;
+  margin: 1em 0 !important;
+  padding-left: 2em !important;
+}
+
+main li {
+  display: list-item !important;
+  margin: 0.3em 0 !important;
+}
+
+/* Ajuste para código apenas no conteúdo principal */
+main pre, main code {
+  overflow: visible !important;
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  max-height: none !important;
+}
