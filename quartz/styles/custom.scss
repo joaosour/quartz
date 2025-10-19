@@ -94,8 +94,65 @@ img {
 body {
   font-size: 16px;       // Tamanho base de fonte confortável para iPhone
   -webkit-text-size-adjust: 100%;  // Evita o ajuste automático de fonte pelo iOS
+  text-size-adjust: 100%;
 }
 
-p, li, h1, h2, h3, h4, h5, h6 {
-  font-size: clamp(16px, 1.2vw, 20px); /* Garante tamanho mínimo e adapta ao viewport */
+// Tamanhos de fonte otimizados para iPhone (mínimo 16px evita zoom automático)
+p, li {
+  font-size: 16px !important;
+}
+
+input, textarea, select {
+  font-size: 16px !important;  // Crítico: evita zoom ao focar em inputs no iPhone
+}
+
+h1 {
+  font-size: 1.75rem !important;  // 28px
+}
+
+h2 {
+  font-size: 1.4rem !important;   // 22.4px
+}
+
+h3 {
+  font-size: 1.12rem !important;  // 17.92px
+}
+
+h4, h5, h6 {
+  font-size: 1rem !important;     // 16px
+}
+
+// Prevenir overflow horizontal em dispositivos móveis
+@media screen and (max-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .page {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
+  
+  #quartz-body {
+    overflow-x: hidden !important;
+    max-width: 100% !important;
+  }
+  
+  pre, code {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+  }
+  
+  img, video, iframe {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  
+  table {
+    display: block;
+    overflow-x: auto !important;
+    max-width: 100% !important;
+  }
 }

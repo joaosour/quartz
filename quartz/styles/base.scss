@@ -8,15 +8,24 @@ html {
   scroll-behavior: smooth;
   text-size-adjust: none;
   overflow-x: hidden;
-  width: 100vw;
+  width: 100%;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 body {
   margin: 0;
-  box-sizing: border-box;
+  padding: 0;
   background-color: var(--light);
   font-family: var(--bodyFont);
   color: var(--darkgray);
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
 }
 
 .text-highlight {
