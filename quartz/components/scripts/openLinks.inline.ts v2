@@ -1,0 +1,52 @@
+export default `
+// Abre links em nova aba via delegação de eventos — funciona mesmo com SPA
+(function() {
+  function isAnchor(el) {
+    return el && el.tagName && el.tagName.toLowerCase() === 'a';
+  }
+
+  function findAnchor(node) {
+    while (node && node !== document) {
+      if (isAnchor(node)) return node;
+      node = node.parentNode;
+    }
+    return null;
+  }
+
+  function shouldForceNewTab(link) {
+    const href = link.getAttribute('href');
+    if (!href) return false;
+    // ignore anchors, javascript:, mailto:, tel:, and same-page fragments
+    if (href.startsWith('#') || href.startsWith('javascript:') || href.startsWith('mailto:') || href.startsWith('tel:')) return false;
+    // allow links already explicitly set (target or download)
+    if (link.hasAttribute('target') || link.hasAttribute('download')) return false;
+    return true;
+  }
+
+  // captura para interceptar antes de comportamento padrão do SPA
+  document.addEventListener('click', function(ev) {
+    // não interferir quando usuário usa teclado modificador (ctrl/cmd/shift/alt) ou botão do meio
+    if (ev.defaultPrevented) return;
+    if (ev.button && ev.button !== 0) return; // somente clique esquerdo
+    if (ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey) return;
+
+    const anchor = findAnchor(ev.target);
+    if (!anchor) return;
+
+    if (!shouldForceNewTab(anchor)) return;
+
+    const href = anchor.getAttribute('href');
+    if (!href) return;
+
+    // tenta abrir em nova aba e prevenir navegação na mesma
+    try {
+      window.open(href, '_blank', 'noopener,noreferrer');
+      ev.preventDefault();
+    } catch (e) {
+      // fallback: definir atributos para futuros cliques / navegações
+      anchor.setAttribute('target', '_blank');
+      anchor.setAttribute('rel', 'noopener noreferrer');
+    }
+  }, true); // use capture phase
+})();
+`
