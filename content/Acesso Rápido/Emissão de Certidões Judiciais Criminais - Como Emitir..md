@@ -1,5 +1,5 @@
 ---
-{"publish":true,"permalink":"/emissao_certidao_criminal","created":"2025-10-17T22:24:31.315-03:00","modified":"2025-10-19T11:43:13.322-03:00","cssclasses":""}
+{"publish":true,"permalink":"/emissao_certidao_criminal","created":"2025-10-17T22:24:31.315-03:00","modified":"2025-10-19T11:44:09.300-03:00","cssclasses":""}
 ---
 
 #### CERTIDÃO DA POLÍCIA CIVIL
@@ -16,8 +16,7 @@
 1. Preencha o Tipo de Certidão com “Criminal”
 2. Preencha o Órgão(s) com “SEÇÃO JUDICIÁRIA DO ESTADO DO PARÁ”
 3. Preencha o o seu CPF
-4. Clique em “Emitir Certidão”Ok
-5. 
+4. Clique em “Emitir Certidão”
     
 ![[Arquivos/Pasted image 20251017162554.png]]
 
