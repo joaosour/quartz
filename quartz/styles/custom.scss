@@ -225,3 +225,25 @@ h4, h5, h6 {
   }
 }
 
+// Customização do elemento code e botão de copiar
+pre {
+  max-width: 90% !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  position: relative;
+}
+
+// Botão de copiar sempre visível e à esquerda
+.clipboard-button {
+  left: 0 !important;
+  right: auto !important;
+  bottom: -3px;
+  opacity: 1 !important;  // Sempre visível
+  z-index: 10;
+}
+
+// Padding no código para não sobrepor o botão
+pre > code {
+  padding-left: 35px !important;
+}
+
