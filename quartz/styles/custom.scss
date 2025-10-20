@@ -124,20 +124,48 @@ h4, h5, h6 {
 
 // Prevenir overflow horizontal em dispositivos móveis
 @media screen and (max-width: 768px) {
+  // Regra global para todos os elementos
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  
   html, body {
     overflow-x: hidden !important;
     width: 100% !important;
     max-width: 100% !important;
+    position: relative !important;
   }
   
   .page {
     overflow-x: hidden !important;
     max-width: 100% !important;
+    width: 100% !important;
   }
   
   #quartz-body {
     overflow-x: hidden !important;
     max-width: 100% !important;
+    width: 100% !important;
+  }
+  
+  // Garantir que todo o conteúdo de texto respeite a largura
+  p, li, h1, h2, h3, h4, h5, h6, div, span, a {
+    max-width: 100% !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    word-break: break-word !important;
+  }
+  
+  // Conteúdo central
+  .center {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  article {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
   }
   
   pre, code {
