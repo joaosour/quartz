@@ -45,20 +45,60 @@ main pre, main code {
 }
 
 
-.sidebar.left {
-  background-color: #1c1b1a !important;  // background lateral esquerda
-  color: #ffffff;
+// Cores para MODO ESCURO
+:root[saved-theme="dark"] {
+  .sidebar.left {
+    background-color: #1c1b1a !important;  // background lateral esquerda
+    color: #ffffff;
+  }
+
+  .sidebar.right {
+    background-color: #1c1b1a !important;  // background lateral direita
+    color: #ffffff;
+  }
+
+  .main-content, .content {
+    // background-color: #1c1b1a !important;   // background corpo principal
+    padding: 10px !important;                // padding 10px no corpo da página
+    color: #ffffff;
+  }
 }
 
-.sidebar.right {
-  background-color: #1c1b1a !important;  // background lateral direita
-  color: #ffffff;
+// Cores para MODO CLARO
+:root[saved-theme="light"] {
+  .sidebar.left {
+    background-color: #f5f5f5 !important;  // background lateral esquerda claro
+    color: #1c1b1a;
+  }
+
+  .sidebar.right {
+    background-color: #f5f5f5 !important;  // background lateral direita claro
+    color: #1c1b1a;
+  }
+
+  .main-content, .content {
+    // background-color: #ffffff !important;   // background corpo principal claro
+    padding: 10px !important;                // padding 10px no corpo da página
+    color: #1c1b1a;
+  }
 }
 
-.main-content, .content {
-  // background-color: #1c1b1a !important;   // background corpo principal
-  padding: 10px !important;                // padding 10px no corpo da página
-  color: #ffffff;
+// Fallback para quando não há tema definido (usa modo claro)
+:root:not([saved-theme]) {
+  .sidebar.left {
+    background-color: #f5f5f5 !important;
+    color: #1c1b1a;
+  }
+
+  .sidebar.right {
+    background-color: #f5f5f5 !important;
+    color: #1c1b1a;
+  }
+
+  .main-content, .content {
+    padding: 10px !important;
+    color: #1c1b1a;
+  }
 }
 
 .toc.desktop-only {
