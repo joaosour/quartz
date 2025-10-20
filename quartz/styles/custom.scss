@@ -101,6 +101,11 @@ main pre, main code {
   }
 }
 
+
+  button.desktop-explorer {
+    height: 15px !important;
+  }
+
 .toc.desktop-only {
   overflow-x: hidden !important;           // Esconde a barra de rolagem horizontal
   overflow-y: auto;                        // Permite scroll vertical se necessário
@@ -223,6 +228,7 @@ h4, h5, h6 {
     overflow-x: auto !important;
     max-width: 100% !important;
   }
+
 }
 
 // Customização do elemento code e botão de copiar
@@ -240,12 +246,28 @@ pre {
   bottom: -3px;
   top: 0px;
   opacity: 1 !important;  // Sempre visível
-  z-index: 10;
+  // z-index: 10;
+}
+
+// No mobile, garantir que explorer fique ACIMA de tudo
+@media screen and (max-width: 768px) {
+  // Aumentar z-index do explorer para ficar acima de qualquer elemento
+  .explorer-content {
+    z-index: 9999 !important;  // Maior que qualquer outro elemento
+  }
   
+  .mobile-explorer {
+    z-index: 10000 !important;  // Botão ainda mais alto
+  }
+
+
+
 }
 
 // Padding no código para não sobrepor o botão
 pre > code {
   padding-left: 35px !important;
 }
+
+
 
