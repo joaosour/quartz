@@ -1,5 +1,5 @@
 ---
-{"publish":true,"title":"Manual de como atualizar o winthor","created":"2025-10-18T14:32:48.847-03:00","modified":"2025-10-18T15:42:18.384-03:00","cssclasses":""}
+{"publish":true,"permalink":"/Trabalho/Durães/Manual de Como atualizar o winthor (virada de sistema).md","title":"Manual de como atualizar o winthor","created":"2025-10-16T23:36:30.605-03:00","modified":"2025-12-11T08:41:54.323-03:00","cssclasses":""}
 ---
 
 ✅ Download e Atualização de Rotinas
@@ -18,8 +18,15 @@
 	6. Desligar o servidor VMSERVER (IP final 130 no Team Viewer)
 ---
 ### CCW
-- [ ] Baixar todas as rotinas (1.  Selecionando a opção ***Versão anterior*** 2. Clicando na ***checkbox*** que marca todas 3. Clicando no ***ícone de download*** 4. Selecionar a opção ***Transferir*** 5. Todas as rotinas serão baixadas na pasta "baixadas" do disco **P:/** do winthor.
-- [ ] Colar rotinas no **P:/**
+- [ ] ANTES DE QUALQUER COISA, FAZER O BACKUP DE TODAS AS PASTAS "MOD..." do disco P:/ para outra máquina por segurança. Depois:
+- [ ] Acessar o CCW e ir na opção ***Árvore de rotinas*** ([link](https://centraldecontrole.pcinformatica.com.br/#/cliente/arvore-rotinas))
+	1. Em ***Aplicar para seleção***, marque ***Desatualizadas para última existente***
+		1. (isso se em "versão corrente" houver somente rotinas do módulo novo que deseja atualizar: exemplo, se estiver na 37 e quiser ir para 38, em "versão corrente" deve haver somente versões no máxima 38, não 39);
+	2. Clicar na ***checkbox*** que marca todas
+	3. Clicando no ***ícone de download***;
+	4. Selecionar a opção ***Transferir/Download*** (**não é** para selecionar "instalar") nesse caso. 
+	5. Todas as rotinas serão baixadas na pasta "**baixadas**" do disco **P:/** do winthor, nas suas respectivas pastas "MOD"
+- [ ] Colar rotinas no **P:/** também em seus respectivos "MOD's". *(Exemplo: se dentro de BAIXADAS tem MOD-14 e o arquivo PCSIS1464, você deve pegar esse arquivo de rotina >> copiar >> colar dentro da pasta MOD-14 que está na raiz do "P:/".)*
 - [ ] Pegar o arquivo da PCINF000.EXE (pasta MOD-000) e PCINFTAB.PC (MOD-005) e substituir na pasta geral do P:/ (lembrando de renomear os arquivos antigos para "nomeDoArquivo.NumeroDaVersaoAntiga.ExtensaoDoArquivo" para deixar salvo por segurança.
 - [ ] Abrir o Winthor e verificar se aparece a versão nova, bem como para a 560 também. 
 - [ ] **Atualizar Tabelas, Dicionário de Dados, Procedures**
@@ -61,8 +68,8 @@
 - [ ] Todas as abas (marcar Dropar objetivos)
 - [ ] Obs: pode dar erro na PCFISCAL e FWPCFISCAL (ou algo assim).Ambas devem estar na mesma versão para funcionar. Primeiro atualiza fiscal, depois FWPC, qualquer coisa atualizar a PARAMFILIAL (ou algo assim) antes dessas duas. No passado deu erro ao atualizar a FWPC porque faltavam atualizar a PCPARAMFILIAL.
 
- #### 1460 (descontinuada, migrada para o WTA, 814)
-- [ ] Todas as abas
+ #### ~~1460 (descontinuada, migrada para o WTA, 814)~~
+- [ ] ~~Todas as abas~~
 
 ### Validações no WTA
 #### [Acessar WTA (clique aqui)](http://192.168.1.202:8080/portal/#/rotina)
