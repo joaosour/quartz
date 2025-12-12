@@ -1,5 +1,5 @@
 ---
-{"publish":true,"permalink":"/Trabalho/Durães/Manual de Como atualizar o winthor (virada de sistema).md","title":"Manual de como atualizar o winthor","created":"2025-10-16T23:36:30.605-03:00","modified":"2025-12-11T08:41:54.323-03:00","cssclasses":""}
+{"publish":true,"permalink":"/Trabalho/Durães/Manual de Como atualizar o winthor (virada de sistema).md","title":"Manual de como atualizar o winthor","created":"2025-10-16T23:36:30.605-03:00","modified":"2025-12-12T10:32:27.820-03:00","cssclasses":""}
 ---
 
 ✅ Download e Atualização de Rotinas
@@ -10,12 +10,12 @@
 1. Nenhum usuário logado;
 2. Fora do horário de expediente;
 3. Parar serviços da Máxima Tech e outros que dependem do winthor:
-	1. Pausar o extrator/servidor máxima no [portal máxima](https://central.solucoesmaxima.com.br/#/dashboard) (talvez seja necessário acessar via aba "Início" do outro [portal máxima](https://app.solucoesmaxima.com.br/login)).
-	2. Desligar o servidor do BI (IP final 98 no Team Viewer);
-	3. Desligar os servidores TS (via área de trabalho remota, IP final 3 e final 2).
-	4. Desligar o DOCFISCAL (IP final 30 no Team Viewer);
-	5. Desligar o servidor VMHOST (IP final 101 no Team Viewer) (que contem o extrator da Sellers);
-	6. Desligar o servidor VMSERVER (IP final 130 no Team Viewer)
+	1. [ ] Pausar o extrator/servidor máxima no [portal máxima](https://central.solucoesmaxima.com.br/#/dashboard) (talvez seja necessário acessar via aba "Início" do outro [portal máxima](https://app.solucoesmaxima.com.br/login)).
+	2. [ ] Desligar o servidor do BI (IP final 98 no Team Viewer);
+	3. [ ] Desligar os servidores TS (via área de trabalho remota, IP final 3 e final 2).
+	4. [ ] Desligar o DOCFISCAL (IP final 30 no Team Viewer);
+	5. [ ] Desligar o servidor VMHOST (IP final 101 no Team Viewer) (que contem o extrator da Sellers);
+	6. [ ] Desligar o servidor VMSERVER (IP final 130 no Team Viewer)
 ---
 ### CCW
 - [ ] ANTES DE QUALQUER COISA, FAZER O BACKUP DE TODAS AS PASTAS "MOD..." do disco P:/ para outra máquina por segurança. Depois:
