@@ -1,5 +1,5 @@
 ---
-{"publish":true,"permalink":"/Acesso Rápido/Sopa de frango.md","title":"Sopa de frango","created":"2025-10-19T14:00:16.839-03:00","modified":"2025-10-19T14:01:46.000-03:00","cssclasses":""}
+{"publish":true,"permalink":"/Acesso Rápido/Sopa de frango.md","title":"Sopa de frango","created":"2025-10-20T08:24:25.523-03:00","modified":"2025-10-19T14:01:46.000-03:00","cssclasses":""}
 ---
 
 Amassar:

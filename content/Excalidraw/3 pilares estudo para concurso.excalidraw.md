@@ -1,5 +1,5 @@
 ---
-{"publish":true,"created":"2025-04-15T15:14:10.276-03:00","modified":"2025-10-18T16:54:29.694-03:00","tags":["excalidraw"],"cssclasses":""}
+{"publish":true,"permalink":"/Excalidraw/3 pilares estudo para concurso.excalidraw.md","created":"2025-01-02T19:57:45.823-03:00","modified":"2025-10-18T16:54:29.000-03:00","tags":["excalidraw"],"cssclasses":""}
 ---
 
 ==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠== You can decompress Drawing data with the command palette: 'Decompress current Excalidraw file'. For more info check in plugin settings under 'Saving'
