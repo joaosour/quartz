@@ -1,5 +1,5 @@
 ---
-{"publish":true,"permalink":"/SQL/ORACLE/SQL - ABRIR BANCO.md","created":"2025-12-22T09:34:19.554-03:00","modified":"2025-12-22T09:48:43.630-03:00","cssclasses":""}
+{"publish":true,"permalink":"/SQL/ORACLE/SQL - ABRIR BANCO.md","created":"2025-12-22T09:34:19.554-03:00","modified":"2025-12-22T10:15:20.258-03:00","cssclasses":""}
 ---
 
 Pode haver o erro: **ORA-01109: banco de dados não aberto**.
@@ -37,4 +37,9 @@ SELECT name, open_mode FROM v$pdbs;
 ### 6. Altere o estado do PDB:
 ```sql
 ALTER PLUGGABLE DATABASE nome_do_pdb OPEN;
+```
+
+### 7. (Opcional) Habilitar OPEN automático do PDB:
+```sql
+alter pluggable database pdbjoao save state;
 ```
