@@ -1,5 +1,5 @@
 ---
-{"publish":true,"permalink":"/SQL/ORACLE/SQL - CRIAR PDB.md","created":"2025-12-19T16:56:17.781-03:00","modified":"2025-12-19T18:02:27.254-03:00","cssclasses":""}
+{"publish":true,"permalink":"/SQL/ORACLE/SQL - CRIAR PDB.md","created":"2025-12-19T16:56:22.055-03:00","modified":"2025-12-25T20:07:19.232-03:00","cssclasses":""}
 ---
 
 ### ✔️ Opção 2 — Criar um PDB (solução correta)
@@ -52,7 +52,7 @@ ALTER USER joao DEFAULT TABLESPACE dados_joao;
 ```
 para:
 ```sql
-✅ logar no banco
+✅ logar no banco (obs: sempre informar em "nome do serviço" o pdb criado; autenticação é "padrão")
 ✅ criar tabelas no tablespace dele    
 ✅ inserir, atualizar, apagar dados das próprias tabelas
 ```
