@@ -1,5 +1,5 @@
 ---
-{"publish":true,"permalink":"/SQL/ORACLE/SQL - EXPORTAR BANCO.md","created":"2025-12-19T18:11:30.890-03:00","modified":"2025-12-22T15:41:38.536-03:00","cssclasses":""}
+{"publish":true,"permalink":"/SQL/ORACLE/SQL - EXPORTAR BANCO.md","created":"2025-12-19T18:11:34.920-03:00","modified":"2025-12-22T15:41:38.000-03:00","cssclasses":""}
 ---
 
 ### 1. Comando CMD para executar o backup caso a exata 2 já tenha sido executada:

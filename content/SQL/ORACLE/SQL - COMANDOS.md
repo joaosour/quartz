@@ -1,5 +1,5 @@
 ---
-{"publish":true,"permalink":"/SQL/ORACLE/SQL - COMANDOS.md","created":"2025-12-19T16:02:35.044-03:00","modified":"2025-12-19T17:50:07.077-03:00","cssclasses":""}
+{"publish":true,"permalink":"/SQL/ORACLE/SQL - COMANDOS.md","created":"2025-12-19T16:25:25.214-03:00","modified":"2025-12-19T17:50:07.000-03:00","cssclasses":""}
 ---
 
 

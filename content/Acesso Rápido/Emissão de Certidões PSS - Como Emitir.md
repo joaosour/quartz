@@ -1,5 +1,5 @@
 ---
-{"publish":true,"permalink":"/emissao_certidao_criminal","created":"2025-10-17T16:23:18.482-03:00","modified":"2025-12-02T14:32:18.196-03:00","cssclasses":""}
+{"publish":true,"permalink":"/emissao_certidao_criminal","created":"2025-12-02T18:46:28.735-03:00","modified":"2025-12-02T14:32:18.000-03:00","cssclasses":""}
 ---
 
 #### CERTIDÃO DA POLÍCIA CIVIL

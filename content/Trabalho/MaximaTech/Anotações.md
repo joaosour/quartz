@@ -1,5 +1,5 @@
 ---
-{"publish":true,"permalink":"/Trabalho/MaximaTech/Anotações.md","created":"2026-01-08T12:25:09.232-03:00","modified":"2026-01-08T12:27:50.251-03:00","cssclasses":""}
+{"publish":true,"permalink":"/Trabalho/MaximaTech/Anotações.md","created":"2026-01-08T12:25:09.232-03:00","modified":"2026-01-08T12:28:54.498-03:00","cssclasses":""}
 ---
 
 ### Premiação monitor de desempenho.
@@ -12,7 +12,7 @@ R$ 5.000,00
 
 Demais 80% igual para todos.
 
-### INDICADORES
+### Indicadores
 
 NPS - nota
 CSAT - nota no jira

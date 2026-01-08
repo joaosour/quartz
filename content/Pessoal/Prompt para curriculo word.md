@@ -1,5 +1,5 @@
 ---
-{"publish":true,"permalink":"/Pessoal/Prompt para curriculo word.md","created":"2025-12-18T15:10:19.943-03:00","modified":"2025-12-18T17:33:33.103-03:00","cssclasses":""}
+{"publish":true,"permalink":"/Pessoal/Prompt para curriculo word.md","created":"2025-12-18T18:49:12.880-03:00","modified":"2025-12-18T17:33:33.000-03:00","cssclasses":""}
 ---
 
 ```

@@ -1,5 +1,5 @@
 ---
-{"publish":true,"permalink":"/Trabalho/Durães/Manual de Como atualizar o winthor (virada de sistema).md","title":"Manual de como atualizar o winthor","created":"2025-10-16T23:36:30.605-03:00","modified":"2025-12-12T10:32:27.820-03:00","cssclasses":""}
+{"publish":true,"permalink":"/Trabalho/Durães/Manual de Como atualizar o winthor (virada de sistema).md","title":"Manual de como atualizar o winthor","created":"2025-10-18T14:32:48.847-03:00","modified":"2025-12-12T10:32:27.000-03:00","cssclasses":""}
 ---
 
 ✅ Download e Atualização de Rotinas
