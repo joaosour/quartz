@@ -1,5 +1,5 @@
 ---
-{"publish":true,"permalink":"/SQL/ORACLE/SQL - COMANDOS.md","created":"2025-12-19T16:25:25.214-03:00","modified":"2025-12-19T17:50:07.000-03:00","cssclasses":""}
+{"publish":true,"permalink":"/SQL/ORACLE/SQL - COMANDOS.md","created":"2025-12-19T16:25:25.214-03:00","modified":"2026-01-12T10:22:23.916-03:00","cssclasses":""}
 ---
 
 
@@ -31,9 +31,12 @@ INSERT ALL
 SELECT 1 FROM DUAL;        
 ```
 
-### COMANDO
+### UPDATE
 ```sql
-instrucao
+UPDATE CLIENTES
+SET cliente = 'JOAO',
+    dt_cadastro = DATE '2025-12-01'
+WHERE id_cliente = 1;
 ```
 
 ### COMANDO
