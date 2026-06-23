@@ -2,7 +2,7 @@
 publish: true
 permalink: laiane1
 created: 2026-06-08T22:40:34.433-03:00
-modified: 2026-06-08T22:40:44.642-03:00
+modified: 2026-06-23T16:52:53.049-03:00
 ---
 
 **Nome:**
@@ -124,6 +124,24 @@ laianeq874@gmail.com
 
 ```
 88.332.580/0023-70
+```
+
+**EMAIL TOMADOR:**
+
+```
+ailson.vier@ulbra.br
+```
+
+**TELEFONE TOMADOR:**
+
+```
+(51)3462-9587
+```
+
+**CEP:**
+
+```
+68.025-000
 ```
 
 **CÓDIGO DE TRIBUTAÇÃO NACIONAL**
