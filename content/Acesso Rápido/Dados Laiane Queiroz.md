@@ -2,7 +2,7 @@
 publish: true
 permalink: laiane
 created: 2026-06-08T22:40:34.433-03:00
-modified: 2026-06-23T16:55:03.233-03:00
+modified: 2026-06-23T17:07:59.825-03:00
 ---
 
 **Nome:**
@@ -153,7 +153,7 @@ ailson.vier@ulbra.br
 **DESCRIÇÃO DO SERVIÇO:**
 
 ```
-Serviços prestados de auxiliar de turma em atividades pedagógicas no período de 01 a 31/05/2026.
+Serviços prestados de auxiliar de turma em atividades pedagógicas no período de 01 a 3X/0X/2026.
 ```
 
 **INFORMAÇÕES COMPLEMENTARES:**
